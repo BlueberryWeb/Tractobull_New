@@ -1,0 +1,80 @@
+.my-dropzone {
+    height: 200px;
+    background-color: #f2f2f2;
+}
+
+.widget {
+    cursor: pointer;
+}
+
+.row-header-bg {
+    background-color: #F4F6FA;
+    color: gray;
+    border-right: 4px solid #6BC3F0;
+    border-radius: 0px;
+}
+
+.row-header-bg.disabled {
+    border-right: 4px solid gray;
+}
+
+@media (min-width: 768px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 100%;
+        *width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 50%;
+        *width: 50%;
+    }
+}
+
+/**
+ *  The following is not really needed in this case
+ *  Only to demonstrate the usage of @media for large screens
+ */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        /*width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;*/
+        width: 16%;
+        *width: 16%;
+    }
+
+    .seven-cols .col-lg-2 .col-xs-8 h3 {
+        font-size: 12px;
+    }
+
+    .seven-cols .col-lg-2 .col-xs-4 .fa-4x {
+        font-size: 32px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+    }
+
+    .seven-cols .col-lg-2 .col-xs-8 h3 {
+        font-size: 12px;
+    }
+
+    .seven-cols .col-lg-12 .col-xs-4 .fa-4x {
+        font-size: 34px;
+    }
+
+}
+
