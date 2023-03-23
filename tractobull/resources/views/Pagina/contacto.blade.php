@@ -91,7 +91,8 @@
         <div class="row" >
               <div class="col-12 mt-5 mb-5 p-0" >
                 <div class="rounded theme-border w-100 d-block position-relative mt-5 back-blanco" >
-                    <form method="post" class="form-contacto" id="contact_info" name="contact_info" enctype="multipart/form-data" action="#" >
+                    <form method="POST" class="form-contacto" id="contact_info" name="contact_info" enctype="multipart/form-data" action="{{ route('mail') }}" >
+                        @csrf
                         <div class="row" > 
                             <div class="col-12 col-md-4" >
                                 <div class="form-group" >
@@ -107,7 +108,7 @@
                             </div>
                             <div class="col-12 col-md-4" >
                                 <div class="form-group" >
-                                    <input type="text" class="form-control placeholder-fix" name="telephone" placeholder="Teléfono" >
+                                    <input type="text" class="form-control placeholder-fix" name="phone" placeholder="Teléfono" >
                                     <label class="form-error error" for="telephone" ></label>
                                 </div>
                             </div>

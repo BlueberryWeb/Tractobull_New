@@ -18,6 +18,8 @@ use App\Http\Controllers\newDealerController;
 use App\Http\Controllers\privacityController;
 use App\Http\Controllers\termsController;
 use App\Http\Controllers\productsController;
+use App\Http\Controllers\mailController;
+
 
 
 
@@ -46,6 +48,8 @@ Route::get('productos', productosController::class, 'index')->name('productos');
 Route::get('terminos', terminosController::class, 'index')->name('terminos');
 Route::get('nuevoDistribuidor', nuevoDistribuidorController::class, 'index')->name('nuevoDistribuidor');
 
+Route::post('contactoMail', [mailController::class, 'store'])->name('mail');
+
 //VERSIÓN INGLÉS
 Route::get('index', indexController::class, 'index')->name('index');
 Route::get('about', aboutController::class, 'index')->name('about');
@@ -56,3 +60,4 @@ Route::get('contact', contactController::class, 'index')->name('contact');
 Route::get('terms', termsController::class, 'index')->name('terms');
 Route::get('privacity', privacityController::class, 'index')->name('privacity');
 Route::get('cookiesPolicy', cookiesPolicyController::class, 'index')->name('cookiesPolicy');
+

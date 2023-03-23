@@ -24,19 +24,185 @@
           </li>
           <li class="nav-item  my-auto">
             <div class="row">
-              <div class="col-md-3 p-0"> 
-                <a class="nav-link click-lang" data-lang="es" href="#">
-                  ESP
-                </a> 
-              </div>
-              <div class="col-md-2 p-0">
-               <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
-              </div>
-              <div class="col-md-3 p-0">
-                <a class="nav-link click-lang" href="#" data-lang="en"  style="padding-left: 0px!important;">
-                  ENG
-                </a> 
-              </div>
+              @php
+                $url= $_SERVER["REQUEST_URI"];
+                
+              @endphp
+              @if ($url === '/index')
+                <div class="col-md-3 p-0"> 
+                  <a class="nav-link click-lang" data-lang="es" href="{{url("/")}}">
+                    ESP
+                  </a> 
+                </div>
+                <div class="col-md-2 p-0">
+                  <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                </div>
+                <div class="col-md-3 p-0">
+                  <a class="nav-link click-lang" href="#" data-lang="en"  style="padding-left: 0px!important;">
+                    ENG
+                  </a> 
+                </div>
+              @elseif ($url == '/about')
+                <div class="col-md-3 p-0"> 
+                  <a class="nav-link click-lang" data-lang="es" href="{{route("nosotros")}}">
+                    ESP
+                  </a> 
+                </div>
+                <div class="col-md-2 p-0">
+                  <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                </div>
+                <div class="col-md-3 p-0">
+                  <a class="nav-link click-lang" href="#" data-lang="en"  style="padding-left: 0px!important;">
+                    ENG
+                  </a> 
+                </div>
+              @elseif ($url == '/dealers')
+                <div class="col-md-3 p-0"> 
+                  <a class="nav-link click-lang" data-lang="es" href="{{route("distribuidores")}}">
+                    ESP
+                  </a> 
+                </div>
+                <div class="col-md-2 p-0">
+                  <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                </div>
+                <div class="col-md-3 p-0">
+                  <a class="nav-link click-lang" href="#" data-lang="en"  style="padding-left: 0px!important;">
+                    ENG
+                  </a> 
+                </div>
+              @elseif ($url == '/products')
+                <div class="col-md-3 p-0"> 
+                  <a class="nav-link click-lang" data-lang="es" href="{{route("productos")}}">
+                    ESP
+                  </a> 
+                </div>
+                <div class="col-md-2 p-0">
+                  <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                </div>
+                <div class="col-md-3 p-0">
+                  <a class="nav-link click-lang" href="#" data-lang="en"  style="padding-left: 0px!important;">
+                    ENG
+                  </a> 
+                </div>
+              @elseif ($url == '/newDealers')
+                <div class="col-md-3 p-0"> 
+                  <a class="nav-link click-lang" data-lang="es" href="{{route("nuevoDistribuidor")}}">
+                    ESP
+                  </a> 
+                </div>
+                <div class="col-md-2 p-0">
+                  <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                </div>
+                <div class="col-md-3 p-0">
+                  <a class="nav-link click-lang" href="#" data-lang="en"  style="padding-left: 0px!important;">
+                    ENG
+                  </a> 
+                </div>
+              @elseif ($url == '/contact')
+                <div class="col-md-3 p-0"> 
+                  <a class="nav-link click-lang" data-lang="es" href="{{route("contacto")}}">
+                    ESP
+                  </a> 
+                </div>
+                <div class="col-md-2 p-0">
+                  <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                </div>
+                <div class="col-md-3 p-0">
+                  <a class="nav-link click-lang" href="#" data-lang="en"  style="padding-left: 0px!important;">
+                    ENG
+                  </a> 
+                </div>
+              @endif
+              
+              @php
+                $url= $_SERVER["REQUEST_URI"];
+                
+              @endphp
+               @if ($url === '/')
+                  <div class="col-md-3 p-0"> 
+                    <a class="nav-link click-lang" data-lang="es" href="#">
+                      ESP
+                    </a> 
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                  </div>
+                  <div class="col-md-3 p-0">
+                    <a class="nav-link click-lang" href="{{ route("index")}}" data-lang="en"  style="padding-left: 0px!important;">
+                      ENG
+                    </a> 
+                  </div>
+                @elseif ($url == '/nosotros')
+                  <div class="col-md-3 p-0"> 
+                    <a class="nav-link click-lang" data-lang="es" href="#">
+                      ESP
+                    </a> 
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                  </div>
+                  <div class="col-md-3 p-0">
+                    <a class="nav-link click-lang" href="{{ route("about")}}" data-lang="en"  style="padding-left: 0px!important;">
+                      ENG
+                    </a> 
+                  </div>
+                @elseif ($url == '/distribuidores')
+                  <div class="col-md-3 p-0"> 
+                    <a class="nav-link click-lang" data-lang="es" href="#">
+                      ESP
+                    </a> 
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                  </div>
+                  <div class="col-md-3 p-0">
+                    <a class="nav-link click-lang" href="{{ route("dealers")}}" data-lang="en"  style="padding-left: 0px!important;">
+                      ENG
+                    </a> 
+                  </div>
+                @elseif ($url == '/productos')
+                  <div class="col-md-3 p-0"> 
+                    <a class="nav-link click-lang" data-lang="es" href="#">
+                      ESP
+                    </a> 
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                  </div>
+                  <div class="col-md-3 p-0">
+                    <a class="nav-link click-lang" href="{{ route("products")}}" data-lang="en"  style="padding-left: 0px!important;">
+                      ENG
+                    </a> 
+                  </div>
+                @elseif ($url == '/nuevoDistribuidor')
+                  <div class="col-md-3 p-0"> 
+                    <a class="nav-link click-lang" data-lang="es" href="#">
+                      ESP
+                    </a> 
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                  </div>
+                  <div class="col-md-3 p-0">
+                    <a class="nav-link click-lang" href="{{ route("newDealers")}}" data-lang="en"  style="padding-left: 0px!important;">
+                      ENG
+                    </a> 
+                  </div>
+                @elseif ($url == '/contacto')
+                  <div class="col-md-3 p-0"> 
+                    <a class="nav-link click-lang" data-lang="es" href="#">
+                      ESP
+                    </a> 
+                  </div>
+                  <div class="col-md-2 p-0">
+                    <span class="nav-link p-0" style="padding:1.1em .8em !important;">/</span>
+                  </div>
+                  <div class="col-md-3 p-0">
+                    <a class="nav-link click-lang" href="{{ route("contact")}}" data-lang="en"  style="padding-left: 0px!important;">
+                      ENG
+                    </a> 
+                  </div>
+                @endif
             </div>
           </li> 
           <!--<li class="nav-item dropdown my-auto">
@@ -52,7 +218,7 @@
           </li>--> 
           <li class="nav-item ml-2  my-auto">
             <a class="nav-link add-dist" href="{{route('nuevoDistribuidor')}}">QUIERO SER DISTRIBUIDOR</a>
-          </li>    
+          </li>   
                    
         </ul>
       </div>
